@@ -35,6 +35,7 @@ function MenuList(item){
     db.collection(collectioName).where('name', '==', item).get().then(quertSnapshot => {
         quertSnapshot.forEach(doc => {
             $('#content').html(doc.data().content);
+            $('#content').prepend(`<br><p class="text-muted fs-6 fst-italic">發布日期: ${doc.data().date}</p>`);
             $('#content').fadeIn(500);
         });
     });
