@@ -31,7 +31,7 @@ function Menu(btn){
 }
 function MenuList(item){
     $('#content').remove();
-    $('#row1').append('<div id="content" class="col-10 m-5 fs-4"></div>');
+    $('#row1').append('<div id="content" class="col-10 m-5 fs-5"></div>');
     db.collection(collectioName).where('name', '==', item).get().then(quertSnapshot => {
         quertSnapshot.forEach(doc => {
             $('#content').html(doc.data().content);
