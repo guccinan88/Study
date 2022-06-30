@@ -14,7 +14,7 @@ function Menu(btn){
     collectioName=$(btn).attr('value');
     var result = [];
     $('#content').remove();
-    $('#row1').append('<div id="content" class="col-5 m-5 fs-4"></div>');
+    $('#row1').append('<div id="content" class="col-5 m-5 fs-5"></div>');
     var docRef = db.collection(collectioName).orderBy("date");
     docRef.get().then(querySnapshot => {
         querySnapshot.forEach(doc => {
